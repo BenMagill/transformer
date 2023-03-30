@@ -1,0 +1,7 @@
+services: 
+  - 
+    name: user-service
+    namespace: user
+  - 
+    name: auth-service
+    namespace: auth
