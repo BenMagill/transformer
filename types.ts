@@ -14,3 +14,8 @@ type Config = {
         namespace: string
     }[]
 }
+
+const enum Mode {
+    mono = "mono",
+    micro = "micro"
+}

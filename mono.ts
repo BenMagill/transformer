@@ -13,6 +13,7 @@ const req = require("require-yml")
 const config: Config = req("./config.yml")
 
 const app = express()
+process.env.MODE = Mode.mono
 
 config.services.forEach(serviceCfg => {
     const service: Service = require(`./${serviceCfg.name}/index.js`);

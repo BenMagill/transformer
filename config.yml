@@ -5,3 +5,5 @@ services:
   - 
     name: auth-service
     namespace: auth
+shared:
+  - shared_folder

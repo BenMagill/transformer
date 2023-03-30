@@ -10,6 +10,7 @@ const service: Service = require(`./${SERVICE_NAME}/index.js`);
 const http = require("http")
 const express = require("express")
 const app = express()
+process.env.MODE = Mode.micro
 
 service.routes.forEach(route => {
     app[route.method](route.path, route.handler)
