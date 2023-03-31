@@ -5,18 +5,17 @@
 const SERVICE_NAME = 'auth-service';
 const PORT = 8080
 
-const service: Service = require(`./${SERVICE_NAME}/index.js`);
 
 import http from "http"
 import express from "express"
-const req = require("require-yml")
-const config: Config = req("./config.yml")
+import { getConfig } from "./transformer";
+const config = getConfig()
 
 const app = express()
 process.env.MODE = Mode.mono
 
 config.services.forEach(serviceCfg => {
-    const service: Service = require(`./${serviceCfg.name}/index.js`);
+    const service: Service = require(`./services/${serviceCfg.name}/index.js`);
     const router = express.Router()
     service.routes.forEach(route => {
         router[route.method](route.path, route.handler)

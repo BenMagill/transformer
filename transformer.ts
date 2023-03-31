@@ -2,6 +2,10 @@
 const req = require("require-yml")
 const config: Config = req("./config.yml")
 
+export function getConfig(): Config {
+    return config;
+}
+
 export function inMono() {
     return process.env.MODE == Mode.mono;
 }

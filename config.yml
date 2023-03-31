@@ -1,9 +1,9 @@
 services: 
   - 
-    name: user-service
+    name: user
     namespace: user
   - 
-    name: auth-service
+    name: auth
     namespace: auth
 shared:
   - shared_folder

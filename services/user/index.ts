@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { getServices } from "../transformer"
+import { getServices } from "../../transformer"
 module.exports = {
     routes: [
         {
